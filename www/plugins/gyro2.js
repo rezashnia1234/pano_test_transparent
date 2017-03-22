@@ -162,17 +162,18 @@ var krpanoplugin = function() {
 		console.log("hlookat:" + W[p][y]);
 		console.log("vlookat:" + W[p][k]);
 		console.log("camroll:" + W[p][N]);
-		
-		if (typeof compassSuccess !== 'undefined' && $.isFunction(compassSuccess)) {
-			
-		}
-		else
+		if (window.cordova)
 		{
-			function compassSuccess(heading) {console.log("Compass Heading:" + heading.magneticHeading);};
-			function compassError(error) {};
+			if (typeof compassSuccess !== 'undefined' && $.isFunction(compassSuccess)) {
+				
+			}
+			else
+			{
+				function compassSuccess(heading) {console.log("Compass Heading:" + heading.magneticHeading);};
+				function compassError(error) {};
+			}
+			navigator.compass.getCurrentHeading(compassSuccess, compassError);
 		}
-		navigator.compass.getCurrentHeading(compassSuccess, compassError);
-		
                 }
             }
         }
