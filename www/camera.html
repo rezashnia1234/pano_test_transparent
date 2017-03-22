@@ -47,7 +47,8 @@
 				
 				$timeout(function () {
 					$("#camera").attr("src","http://localhost:8080/live.jpg?"+new Date().getTime()	);
-				}, 400);
+					console.log("http://localhost:8080/live.jpg?"+new Date().getTime());
+				}, 100);
 				
 			}, 3000);
 		}
@@ -71,6 +72,6 @@
 	</style>
 </head>
 <body onload="init();">
-<img id="camera" class="fullscreen-image" >
+<img id="camera" class="fullscreen-image" src="skin/blank--0.png" >
 </body>
 </html>
