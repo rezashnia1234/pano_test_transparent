@@ -158,11 +158,21 @@ var krpanoplugin = function() {
                         H = Math.max(Math.min(1, 1 - H), 0), lt *= H, Math.abs(lt) < 1e-5 && (lt = 0)
                     }
                     Ot == r && (ft *= Math.pow(W[h].touchfriction, .92), at += ft);
-		W[p][k] = W[p][k] - 90;
+		// W[p][y] = W[p][y] - 180;
 		console.log("hlookat:" + W[p][y]);
 		console.log("vlookat:" + W[p][k]);
 		console.log("camroll:" + W[p][N]);
-
+		
+		if (typeof compassSuccess !== 'undefined' && $.isFunction(compassSuccess)) {
+			
+		}
+		else
+		{
+			function compassSuccess(heading) {console.log("Compass Heading:" + heading.magneticHeading);};
+			function compassError(error) {};
+		}
+		navigator.compass.getCurrentHeading(compassSuccess, compassError);
+		
                 }
             }
         }
