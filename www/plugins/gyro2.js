@@ -165,8 +165,10 @@ var krpanoplugin = function() {
 		// console.log("hlookat:" + W[p][y]);
 		// console.log("vlookat:" + W[p][k]);
 		// console.log("camroll:" + W[p][N]);
-		console.log("Delta2 :" + temp_delta);
-		console.log("temp_compass :" + temp_compass);
+		if (typeof temp_delta !== 'undefined') {
+			console.log("Delta2 :" + temp_delta);
+			console.log("temp_compass :" + temp_compass);
+		}
 		if (window.cordova)
 		{
 			if (typeof compassSuccess !== 'undefined' && $.isFunction(compassSuccess)) {
