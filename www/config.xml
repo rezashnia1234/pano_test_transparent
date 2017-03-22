@@ -49,7 +49,7 @@
 	<!--<plugin spec="https://github.com/apache/cordova-plugin-media-capture.git" source="git" />-->
 	<plugin spec="https://github.com/apache/cordova-plugin-console.git" source="git" />
 	<plugin spec="https://github.com/apache/cordova-plugin-device.git" source="git" />
-	<!-- <plugin spec="https://github.com/apache/cordova-plugin-camera.git" source="git" /> -->
+	<plugin spec="https://github.com/apache/cordova-plugin-camera.git" source="git" />
 	<!--<plugin spec="https://github.com/apache/cordova-plugin-device-motion.git" source="git" />-->
 	<!--<plugin spec="https://github.com/apache/cordova-plugin-device-orientation.git" source="git" />-->
 	<plugin spec="https://github.com/apache/cordova-plugin-dialogs.git" source="git" />
@@ -97,7 +97,7 @@
 	<plugin spec="https://github.com/Telerik-Verified-Plugins/NativePageTransitions.git " source="git" />
 
 	<plugin spec="https://github.com/Moonware/cordova-cameraserver.git" source="git" />
-	<plugin spec="https://github.com/antonfire/cordova-camera-access.git" source="git" platform="ios" />
+	<plugin spec="https://github.com/antonfire/cordova-camera-access.git" source="git" />
 	
     <!-- Define app icon      -->
     <icon src="images/splash/icon.png" platform="android" />
