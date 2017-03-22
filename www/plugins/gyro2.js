@@ -159,9 +159,9 @@ var krpanoplugin = function() {
                     }
                     Ot == r && (ft *= Math.pow(W[h].touchfriction, .92), at += ft);
 		// W[p][y] = W[p][y] - 180;
-		console.log("hlookat:" + W[p][y]);
-		console.log("vlookat:" + W[p][k]);
-		console.log("camroll:" + W[p][N]);
+		// console.log("hlookat:" + W[p][y]);
+		// console.log("vlookat:" + W[p][k]);
+		// console.log("camroll:" + W[p][N]);
 		if (window.cordova)
 		{
 			if (typeof compassSuccess !== 'undefined' && $.isFunction(compassSuccess)) {
@@ -169,7 +169,25 @@ var krpanoplugin = function() {
 			}
 			else
 			{
-				function compassSuccess(heading) {console.log("Compass Heading:" + heading.magneticHeading);};
+				function compassSuccess(heading) {
+					console.log("Compass Heading:" + heading.magneticHeading);
+					console.log("hlookat:" + W[p][y]);
+					var temp_hlook = W[p][y];
+					var temp_compass = heading.magneticHeading;
+					if(temp_hlook<0)
+						temp_hlook = temp_hlook + 360;
+					
+					var temp_delta = Math.abs(temp_compass - temp_hlook) % 360;
+					if(temp_delta > 180)
+						temp_delta = 360 - temp_delta;
+					console.log("Delta :" + temp_delta);
+					if(temp_delta > 10)
+					{
+						if(temp_compass>180)
+							temp_compass = temp_compass - 360;
+						W[p][y] = temp_compass;
+					}
+				};
 				function compassError(error) {};
 			}
 			navigator.compass.getCurrentHeading(compassSuccess, compassError);

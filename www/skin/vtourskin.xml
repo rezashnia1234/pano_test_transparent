@@ -330,9 +330,14 @@
 		<layer name="skin_btn_next_fs_icon" style="skin_base" crop="64|64|64|64" align="center" scale="0.5" enabled="false" />
 	</layer>
 
-
+	<!--hamiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiid-->
+	<!--hamiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiid-->
+	<!--hamiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiid-->
 	<!-- gyro plugin -->
 	<plugin name="skin_gyro" keep="true" url="" html5_url="%SWFPATH%/plugins/gyro2.js" devices="html5" enabled="true" onavailable="skin_arrange_buttons();" />
+	<!--hamiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiid-->
+	<!--hamiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiid-->
+	<!--hamiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiid-->
 
 
 	<!-- skin events -->
@@ -546,6 +551,14 @@
 		set(lpos,6);
 		set(cpos,0);
 		if(show_gyrobutton, dec(cpos,20));
+		<!--hamiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiid-->
+		<!--hamiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiid-->
+		<!--hamiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiid-->
+		if(show_gyrobutton,  set(control.usercontrol, off) );
+		ifnot(show_gyrobutton, set(control.usercontrol, all) );
+		<!--hamiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiid-->
+		<!--hamiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiid-->
+		<!--hamiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiid-->
 		if(show_vrbutton, dec(cpos,24));
 		set(rpos,6);
 
