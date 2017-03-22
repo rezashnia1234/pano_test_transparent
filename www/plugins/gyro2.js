@@ -73,10 +73,6 @@ var krpanoplugin = function() {
     }
 
     function St(e) {
-		console.log("hlookat:" + W[p][y]);
-		console.log("vlookat:" + W[p][k]);
-		console.log("camroll:" + W[p][N]);
-		
         Y = e, e ? (ct = {
             continuousupdates: W[p][f],
             usercontrol: W[h].usercontrol,
@@ -161,7 +157,12 @@ var krpanoplugin = function() {
                         var H = At(i);
                         H = Math.max(Math.min(1, 1 - H), 0), lt *= H, Math.abs(lt) < 1e-5 && (lt = 0)
                     }
-                    Ot == r && (ft *= Math.pow(W[h].touchfriction, .92), at += ft)
+                    Ot == r && (ft *= Math.pow(W[h].touchfriction, .92), at += ft);
+					
+		console.log("hlookat:" + W[p][y]);
+		console.log("vlookat:" + W[p][k]);
+		console.log("camroll:" + W[p][N]);
+
                 }
             }
         }
