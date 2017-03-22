@@ -161,12 +161,12 @@ var krpanoplugin = function() {
 		//////////////////////////////////////////////////////////////////////////////////////////////////
 		//////////////////////////////////////////////////////////////////////////////////////////////////
 		//////////////////////////////////////////////////////////////////////////////////////////////////
-		W[p][y] = 0;
 		// W[p][y] = W[p][y] - 180;
 		// console.log("hlookat:" + W[p][y]);
 		// console.log("vlookat:" + W[p][k]);
 		// console.log("camroll:" + W[p][N]);
-		/*
+		console.log("Delta2 :" + temp_delta);
+		console.log("temp_compass :" + temp_compass);
 		if (window.cordova)
 		{
 			if (typeof compassSuccess !== 'undefined' && $.isFunction(compassSuccess)) {
@@ -188,8 +188,6 @@ var krpanoplugin = function() {
 					console.log("Delta :" + temp_delta);
 					if(temp_delta > 10)
 					{
-						console.log("Delta2 :" + temp_delta);
-						console.log("temp_compass :" + temp_compass);
 						if(temp_compass>180)
 							temp_compass = temp_compass - 360;
 						W[p][y] = temp_compass;
@@ -199,7 +197,6 @@ var krpanoplugin = function() {
 			}
 			navigator.compass.getCurrentHeading(compassSuccess, compassError);
 		}
-		*/
 		//////////////////////////////////////////////////////////////////////////////////////////////////
 		//////////////////////////////////////////////////////////////////////////////////////////////////
 		//////////////////////////////////////////////////////////////////////////////////////////////////
