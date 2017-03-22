@@ -1,0 +1,79 @@
+<ion-view title="Settings">
+    <ion-nav-buttons side="left">
+        <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+    </ion-nav-buttons>
+    <ion-content class="has-header">
+        <h1>Settings</h1>
+
+        <div class="list">
+
+            <div class="item range">
+                <i class="icon ion-volume-low"></i>
+                <input type="range" name="volume" min="0" max="100" value="25">
+                <i class="icon ion-volume-high"></i>
+            </div>
+
+            <div class="item range range-positive">
+                <i class="icon ion-ios7-cloud-outline"></i>
+                <input type="range" name="volume" min="0" max="100" value="50">
+                <i class="icon ion-ios7-cloud"></i>
+            </div>
+
+            <div class="item range range-energized">
+                <i class="icon ion-ios7-sunny-outline"></i>
+                <input type="range" name="volume" min="0" max="100" value="75">
+                <i class="icon ion-ios7-sunny"></i>
+            </div>
+
+        </div>
+
+        <ul class="list">
+
+            <li class="item item-toggle">
+                1D
+                <label class="toggle toggle-balanced">
+                    <input type="checkbox">
+
+                    <div class="track">
+                        <div class="handle"></div>
+                    </div>
+                </label>
+            </li>
+
+            <li class="item item-toggle">
+                DataMatrix
+                <label class="toggle toggle-dark">
+                    <input type="checkbox">
+
+                    <div class="track">
+                        <div class="handle"></div>
+                    </div>
+                </label>
+            </li>
+
+            <li class="item item-toggle">
+                QR Code
+                <label class="toggle toggle-positive">
+                    <input type="checkbox">
+
+                    <div class="track">
+                        <div class="handle"></div>
+                    </div>
+                </label>
+            </li>
+
+            <li class="item item-toggle">
+                DotCode
+                <label class="toggle toggle-assertive">
+                    <input type="checkbox">
+
+                    <div class="track">
+                        <div class="handle"></div>
+                    </div>
+                </label>
+            </li>
+
+        </ul>
+
+    </ion-content>
+</ion-view>

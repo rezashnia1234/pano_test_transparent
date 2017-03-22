@@ -31,24 +31,18 @@
 			}, function( error ){
 				console.log('CameraServer Start failed: ' + error);
 			});
-/*
-			cordova.plugins.CameraServer.startCamera(function(){
-				console.log('Capture Started');
-			},function( error ){
-				console.log('CameraServer StartCapture failed: ' + error);
-			});
-*/
+
 			setTimeout(function(){
 				cordova.plugins.CameraServer.startCamera(function(){
 					console.log('Capture Started');
 				},function( error ){
 					console.log('CameraServer StartCapture failed: ' + error);
 				});
-			}, 3000);
+			}, 1000);
 			
 			setTimeout(function(){
 				$("#camera").attr("src","http://localhost:8080/live.jpg");
-			}, 4000);
+			}, 1100);
 		}
 	</script>
 	<style>

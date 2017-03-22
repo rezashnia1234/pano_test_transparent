@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <link href='css/main.css' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow' rel='stylesheet' type='text/css'>
+</head>
+<body>
+
+    <h1>Netcam Studio SmartCam</h1>
+
+    <img id="jpeg_0">
+
+    <script type="text/javascript">
+        var camera_0 = {
+            addEvent: function(elem, event, func ){
+                if (typeof (window.event) != 'undefined')
+                {elem.attachEvent('on' + event, func);}
+                else
+                {elem.addEventListener(event, func, false);}
+            },
+            initCamera: function(jpeg, interval){
+                this.addEvent(jpeg, 'load', function(){setTimeout(function() {camera_0.showJpegFrame(jpeg);}, interval);});
+                this.showJpegFrame(jpeg);
+            },
+            showJpegFrame: function(jpeg){
+                jpeg.src = "/live.jpg?"+new Date().getTime();
+            }
+        }
+
+        camera_0.initCamera(jpeg_0, 40);
+    </script>
+
+
+</body>
+</html>

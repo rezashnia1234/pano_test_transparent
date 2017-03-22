@@ -1,0 +1,38 @@
+<ion-side-menus>
+
+    <ion-pane ion-side-menu-content>
+        <ion-nav-bar class="bar-stable nav-title-slide-ios7">
+            <ion-nav-back-button class="button-clear"><i class="icon ion-ios7-arrow-back"></i> Back
+            </ion-nav-back-button>
+        </ion-nav-bar>
+        <ion-nav-view name="menuContent" animation="slide-left-right"></ion-nav-view>
+    </ion-pane>
+
+    <ion-side-menu side="left">
+        <header class="bar bar-header bar-custom">
+            <img class="titleLogo">
+            <!--<h1 class="title">Netcam Studio Smart Camera</h1>-->
+        </header>
+        <ion-content class="has-header">
+            <ion-list>
+
+                <div class="item item-divider">Netcam Studio Smart Camera</div>
+
+                <ion-item nav-clear menu-close href="#/app/webserver">
+                    Server
+                </ion-item>
+
+                <ion-item nav-clear menu-close href="#/app/lookup">
+                    Client
+                </ion-item>
+
+                <div class="item item-divider">About</div>
+
+                <ion-item nav-clear menu-close href="#/app/deviceinfo">
+                    About
+                </ion-item>
+
+            </ion-list>
+        </ion-content>
+    </ion-side-menu>
+</ion-side-menus>

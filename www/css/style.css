@@ -1,0 +1,175 @@
+@font-face {
+    font-family: 'Roboto Condensed Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Roboto Condensed Regular'), url('RobotoCondensed-Regular.woff') format('woff');
+}
+
+html,
+body,
+.ionic-body
+.tab-item,
+input,
+button,
+select,
+textarea,
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: "Roboto Condensed Regular", "Helvetica Neue", "Roboto", sans-serif;
+}
+
+/* Empty. Add your own CSS if you like */
+map {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.scroll {
+    height: 100%;
+}
+
+.titleLogo
+{
+    height: 37px;
+    border: 0px;
+    margin:0 auto;
+    content: url("../img/Egg.png");
+}
+
+.bar-custom {
+    border-color: #989898;
+    background-color: #e3e3e3;
+
+    background: -webkit-linear-gradient(left, #d3d3d3, #efefef); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, #d3d3d3, #efefef); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, #d3d3d3, #efefef); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, #d3d3d3, #efefef); /* Standard syntax */
+    /*background-image: linear-gradient(0deg, #b2b2b2, #b2b2b2 50%, transparent 50%);*/
+    color: #444;
+}
+
+/* parallax */
+
+.title-div {
+    width:100%;
+    height:250px;
+}
+
+/*
+.title-div-server {
+    background: url("../img/bg/bg-0.jpg") no-repeat;
+    background-size: cover;
+}
+*/
+
+
+.font-white{
+    color:#ffffff;
+}
+
+
+.font-bold{
+    font-weight: 700;
+}
+
+
+.live-row
+{
+    /*border: 1px solid dodgerblue;*/
+    height: 70%;
+}
+
+.live-container {
+    text-align: center;
+    vertical-align: middle;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+    padding: 20px;
+    height: 100%;
+}
+
+/*
+.live-container-footer {
+    height: calc(100% - 90px);
+}
+*/
+
+
+.live-grab
+{
+    border: 1px solid black;
+    width: auto;
+    height:auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/*
+.info-row{
+    height: 30%;
+}
+*/
+
+.number-input{
+    position: relative;
+    top: -8px;
+    width: 70px;
+    border: 1px solid #cccccc !important;
+    padding: 5px !important;
+    margin: 0 !important;
+    margin-left: 5px !important;
+    font-size: 100% !important;
+}
+
+.right-float{
+    float:right;
+}
+
+/* MODAL STARTS */
+.modal {
+    overflow: visible;
+    width: 100%;
+    height: 100%;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+}
+
+.transparent {
+    /*background: transparent !important;*/
+    background-color: rgba(0,0,0,0.7);
+}
+
+
+.fullscreen-image {
+    max-width: 100%;
+    max-height: 100%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin: auto;
+    overflow: auto;
+    position: absolute !important;
+    border:1px solid black;
+}
+
+/* MODAL ENDS */
+
+/* Collapsable lists, require Angular UI Bootstrap */
+.collapse {display:none}
+
+.collapse.in {
+    display: block;
+}
+
+.collapsing {
+    position: relative;
+    height: 0;
+    overflow: hidden;
+    -webkit-transition: height 0.2s ease;
+    transition: height 0.2s ease;
+}

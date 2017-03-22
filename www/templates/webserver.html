@@ -1,0 +1,131 @@
+<ion-view title="Smart Camera Server">
+    <ion-nav-buttons side="left">
+        <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+    </ion-nav-buttons>
+    <ion-content class="has-header">
+
+        <!-- title-div-server font-white -->
+        <!--
+        <div class="title-div">
+
+            <div class="live-container">
+                <img class="live-grab" src="{{formControls.serverSource}}" imageonload="refreshPreview()" imageonfail>
+            </div>
+
+        </div>
+        -->
+
+
+
+        <!--
+        <div class="item item-divider">Server Path: {{serverLocalPath}}</div>
+        -->
+
+        <!--
+          <div class="item item-divider"></div>
+
+          <div class="row">
+              <div class="col">
+                  <button class="button button-block button-outline button-dark ion-earth" ng-click="getImage()" ng-disabled="!formControls.cameraServerEnabled">
+                      Preview
+                  </button>
+              </div>
+              <div class="col">
+                  <button class="button button-block button-outline button-dark ion-android-refresh" ng-click="refreshInfo()" ng-disabled="!formControls.cameraServerEnabled">
+                      Refresh Info
+                  </button>
+              </div>
+          </div>
+        -->
+        <!-- button-assertive instead of button-icon -->
+        <!--
+        <div class="item item-divider">
+            Server Info
+            <button class="button button-icon button-small right-float" ng-click="refreshInfo()">
+                <i class="icon ion-refresh"></i>
+            </button>
+        </div>
+        -->
+
+
+        <div class="item item-divider item-icon-left" ng-click="panelShow.ServerCommands = !panelShow.ServerCommands">
+            <i class="icon ion-radio-waves"></i>
+            Camera Server
+        </div>
+
+
+        <div collapse="!panelShow.ServerCommands">
+
+            <ion-toggle toggle-class="toggle-dark" ng-model="formControls.cameraServerEnabled" ng-change="switchCameraServer(formControls.cameraServerEnabled)">Enabled</ion-toggle>
+
+            <div ng-if="videoFormats.length > 1">
+                <label class="item item-input item-select">
+                    <div class="input-label">
+                        Format
+                    </div>
+                    <select ng-options="f as f.name for f in videoFormats" ng-model="selectedFormat" ng-change="setFormat(selectedFormat.id)"></select>
+                </label>
+            </div>
+        </div>
+
+
+        <div class="item item-divider item-icon-left" ng-click="panelShow.ServerInfo = !panelShow.ServerInfo">
+            <i class="icon ion-stats-bars"></i>
+            Server Info
+        </div>
+
+        <div collapse="!panelShow.ServerInfo">
+            <div class="item">
+                <!--<i class="icon ion-earth"></i>-->
+                Server Url
+                <span class="item-note">
+                  {{serverUrl}}
+                </span>
+            </div>
+
+            <div class="item"> <!-- item-icon-left -->
+                <!--<i class="icon ion-stats-bars"></i>-->
+                Web Requests
+                <span class="item-note">
+                  {{numRequests}}
+                </span>
+            </div>
+
+            <div class="item"> <!-- item-icon-left -->
+                <!--<i class="icon ion-stats-bars"></i>-->
+                Resolution
+                <span class="item-note">
+                  {{imageResolution}}
+                </span>
+            </div>
+
+            <div class="item item-button-right">
+                Refresh
+                <button class="button button-assertive" ng-click="refreshInfo()">
+                    <i class="icon ion-refresh"></i>
+                </button>
+            </div>
+
+        </div>
+
+        <div class="item item-divider item-icon-left" ng-click="panelShow.Extras = !panelShow.Extras">
+            <i class="icon ion-wand"></i>
+            Extras
+        </div>
+
+        <div collapse="!panelShow.Extras" class="list">
+            <ion-toggle toggle-class="toggle-energized" ng-model="formControls.torchEnabled" ng-change="switchTorch(formControls.torchEnabled)" ng-disabled="!formControls.cameraServerEnabled">Torch Light</ion-toggle>
+
+            <div class="item range range-positive">
+                <i class="icon ion-ios-lightbulb"></i>
+                <input type="range" min="0" max="100" ng-model="formControls.brightness">
+                <i class="icon ion-ios-lightbulb-outline"></i>
+            </div>
+        </div>
+
+        <!--
+        <img class="live-grab" src="data:image/jpeg;base64, {{jsBuffer.Image}}">
+        -->
+
+    </ion-content>
+</ion-view>
