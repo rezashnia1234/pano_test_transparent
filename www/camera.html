@@ -43,20 +43,25 @@
 				});
 			}, 1000);
 			
+			$('#camera').load(function() {
+				setTimeout(function () {
+					$("#camera").attr("src","http://localhost:8080/" + "live.jpg?"+new Date().getTime()	);
+					console.log("http://localhost:8080/" + "live.jpg?"+new Date().getTime());
+				}, 100);
+			});
+			
+			$("#camera").attr("src","http://localhost:8080/" + "live.jpg");
+			
 			setTimeout(function(){
 				console.log('Start Live');
-
-				$('#camera').load(function() {
-					setTimeout(function () {
-						$("#camera").attr("src",window.localStorage.getItem('localhost_url') + "live.jpg?"+new Date().getTime()	);
-						console.log(window.localStorage.getItem('localhost_url') + "live.jpg?"+new Date().getTime());
-					}, 100);
-				});
-				
-				$("#camera").attr("src",window.localStorage.getItem('localhost_url') + "live.jpg");
-				console.log(window.localStorage.getItem('localhost_url') + "live.jpg");
-				
+				$("#camera").attr("src","http://localhost:8080/" + "live.jpg");
+				console.log("http://localhost:8080/" + "live.jpg");
 			}, 3000);
+			setTimeout(function(){
+				console.log('Start Live');
+				$("#camera").attr("src","http://localhost:8080/" + "live.jpg");
+				console.log("http://localhost:8080/" + "live.jpg");
+			}, 4000);
 			
 		}
 	</script>
