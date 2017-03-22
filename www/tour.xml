@@ -111,7 +111,7 @@
 			set(IsMenu_001_Open,false);
 			set(IsMenu_002_Open,false);
 		</action>
-		<view hlookat="172.159" vlookat="4.302" fovtype="MFOV" fov="118.667" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+		<view hlookat="0" vlookat="0" fovtype="MFOV" fov="118.667" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
 	
 		<!--<preview type="grid(cube,64,64,512,0xCCCCCC,0xF6F6F6,0x999999);" />-->
 		<preview url="panos/preview.png" />

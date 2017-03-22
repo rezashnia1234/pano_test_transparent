@@ -160,7 +160,7 @@ var krpanoplugin = function() {
                     Ot == r && (ft *= Math.pow(W[h].touchfriction, .92), at += ft);
 					
 		console.log("hlookat:" + W[p][y]);
-		console.log("vlookat:" + W[p][k]);
+		console.log("vlookat:" + W[p][k] - 90);
 		console.log("camroll:" + W[p][N]);
 
                 }
