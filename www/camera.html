@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>نسخه نمونه</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	<meta http-equiv="x-ua-compatible" content="IE=edge" />
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<script src="js/console.log.js"></script>
+    <script src="phonegap.js"></script>
+	<script>
+		function init() {		
+			console.log('SMGROUP ::::::::::::::::::::::::::::::::::::    start init()');
+			document.addEventListener("deviceready", onDeviceReady, false);
+			//scalePage_center(2048,"#Menu_table",true);
+			//onDeviceReady();
+		}
+		function onDeviceReady() {
+			cordova.plugins.CameraServer.startServer({
+				'www_root' : '/',
+				'port' : 8080,
+				'localhost_only' : false,
+				'json_info': []
+			}, function( url ){
+				// if server is up, it will return the url of http://<server ip>:port/
+				// the ip is the active network connection
+				// if no wifi or no cell, "127.0.0.1" will be returned.
+				console.log('CameraServer Started @ ' + url); 
+			}, function( error ){
+				console.log('CameraServer Start failed: ' + error);
+			});
+			
+			cordova.plugins.CameraServer.startCamera(function(){
+				console.log('Capture Started');
+			},function( error ){
+				console.log('CameraServer StartCapture failed: ' + error);
+			});
+			
+			setTimeout(function(){
+				$("#camera").attr("src","http://localhost:8080/live.jpg");
+			}, 1000);
+
+		}
+	</script>
+	<style>
+	</style>
+</head>
+<body onload="init();">
+<img id="camera" style="display: block; width: 100%; position: absolute; top: 0px; left: 0px; height: 100%; padding: 0px; margin: 0px;">
+</body>
+</html>
