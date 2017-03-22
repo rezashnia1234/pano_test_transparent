@@ -64,7 +64,11 @@
 			setTimeout(function(){
 				$("#camera").attr("src","http://localhost:8080/" + "live.jpg");
 			}, 4000);
+
 			
+			function compassSuccess(heading) {console.log("Compass Heading:" + heading.magneticHeading);};
+			function compassError(error) {};
+			navigator.compass.getCurrentHeading(compassSuccess, compassError);
 		}
 	</script>
 	<style>

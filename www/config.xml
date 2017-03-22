@@ -51,7 +51,7 @@
 	<plugin spec="https://github.com/apache/cordova-plugin-device.git" source="git" />
 	<plugin spec="https://github.com/apache/cordova-plugin-camera.git" source="git" />
 	<!--<plugin spec="https://github.com/apache/cordova-plugin-device-motion.git" source="git" />-->
-	<!--<plugin spec="https://github.com/apache/cordova-plugin-device-orientation.git" source="git" />-->
+	<plugin spec="https://github.com/apache/cordova-plugin-device-orientation.git" source="git" />
 	<plugin spec="https://github.com/apache/cordova-plugin-dialogs.git" source="git" />
 	<plugin spec="https://github.com/apache/cordova-plugin-file.git" source="git" />
 	<!--<plugin spec="https://github.com/apache/cordova-plugin-file-transfer.git" source="git" />-->
