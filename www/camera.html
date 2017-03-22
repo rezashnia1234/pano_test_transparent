@@ -14,6 +14,8 @@
 		function init() {		
 			console.log('SMGROUP ::::::::::::::::::::::::::::::::::::	start init()');
 			document.addEventListener("deviceready", onDeviceReady, false);
+			
+
 			//scalePage_center(2048,"#Menu_table",true);
 			//onDeviceReady();
 		}
@@ -42,15 +44,19 @@
 			
 			setTimeout(function(){
 				console.log('Start Live');
+
+				$('#camera').load(function() {
+					setTimeout(function () {
+						$("#camera").attr("src","http://localhost:8080/live.jpg?"+new Date().getTime()	);
+						console.log("http://localhost:8080/live.jpg?"+new Date().getTime());
+					}, 100);
+				});
+				
 				$("#camera").attr("src","http://localhost:8080/live.jpg");
 				console.log("http://localhost:8080/live.jpg");
 				
-				$timeout(function () {
-					$("#camera").attr("src","http://localhost:8080/live.jpg?"+new Date().getTime()	);
-					console.log("http://localhost:8080/live.jpg?"+new Date().getTime());
-				}, 100);
-				
 			}, 3000);
+			
 		}
 	</script>
 	<style>
