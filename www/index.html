@@ -31,21 +31,14 @@
 				function() {
 					// Inform the user that he has to give permission for access.
 					// Ideally, ask for permission and try again.
-					navigator.notification.confirm(
+					navigator.notification.alert(
 						'Access to the camera is switched off, please enable it in app settings to continue.',	// message
 						onExitConfirm,								// callback
 						'Whoops',									// title
-						['OK','Settings']							// buttonName
+						'OK'										// buttonName
 					);
-					function onExitConfirm(buttonIndex) {
-						if(buttonIndex==1)
-						{
-							// ok tapped no action
-						}
-						else
-						{
-							cordova.plugins.settings.open();
-						}
+					function onExitConfirm() {
+					
 					}
 				}
 			);
@@ -53,7 +46,6 @@
 	</script>
 </head>
 <body onload="init();">
-<a href="camera2.html" class="rightcorner" >Get Camera Access</a>
 <a href="camera.html" class="rightcorner" style="right:165px">Test Camera</a>
 <a href="camera3.html" class="rightcorner" style="right:278px">Augmented Reality</a>
 <script src="tour.js"></script>

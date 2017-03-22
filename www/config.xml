@@ -49,7 +49,7 @@
 	<!--<plugin spec="https://github.com/apache/cordova-plugin-media-capture.git" source="git" />-->
 	<plugin spec="https://github.com/apache/cordova-plugin-console.git" source="git" />
 	<plugin spec="https://github.com/apache/cordova-plugin-device.git" source="git" />
-	<plugin spec="https://github.com/apache/cordova-plugin-camera.git" source="git" />
+	<!-- <plugin spec="https://github.com/apache/cordova-plugin-camera.git" source="git" /> -->
 	<!--<plugin spec="https://github.com/apache/cordova-plugin-device-motion.git" source="git" />-->
 	<!--<plugin spec="https://github.com/apache/cordova-plugin-device-orientation.git" source="git" />-->
 	<plugin spec="https://github.com/apache/cordova-plugin-dialogs.git" source="git" />
@@ -97,36 +97,11 @@
 	<plugin spec="https://github.com/Telerik-Verified-Plugins/NativePageTransitions.git " source="git" />
 
 	<plugin spec="https://github.com/Moonware/cordova-cameraserver.git" source="git" />
-	<plugin spec="https://github.com/antonfire/cordova-camera-access.git" source="git" />
+	<plugin spec="https://github.com/antonfire/cordova-camera-access.git" source="git" platform="ios" />
 	
     <!-- Define app icon      -->
     <icon src="images/splash/icon.png" platform="android" />
     <icon src="images/splash/ios.png" platform="ios" />
-	
-<icon src="images/splash/icon-57.png" width="57" height="57" gap:platform="ios" />
-<icon src="images/splash/icon-57@2x.png" width="114" height="114" gap:platform="ios" />
-<icon src="images/splash/icon-72.png" width="72" height="72" gap:platform="ios" />
-<icon src="images/splash/icon-72@2x.png" width="152" height="152" gap:platform="ios" /> 
-
-<!-- iPhone 6 / 6+ -->
-<icon src="images/splash/icon-60@3x.png" platform="ios" width="180" height="180" />
-
-<!-- iPhone / iPod Touch  -->
-<icon src="images/splash/icon-60.png" platform="ios" width="60" height="60" />
-<icon src="images/splash/icon-60@2x.png" platform="ios" width="120" height="120" />
-
-<!-- iPad -->
-<icon src="images/splash/icon-76.png" platform="ios" width="76" height="76" />
-<icon src="images/splash/icon-76@2x.png" platform="ios" width="152" height="152" />
-
-<!-- Settings Icon -->
-<icon src="images/splash/icon-small.png" platform="ios" width="29" height="29" />
-<icon src="images/splash/icon-small@2x.png" platform="ios" width="58" height="58" />
-
-<!-- Spotlight Icon -->
-<icon src="images/splash/icon-40.png" platform="ios" width="40" height="40" />
-<icon src="images/splash/icon-40@2x.png" platform="ios" width="80" height="80" />
-
 
 
     <!-- Define app splash screen for each platform. -->
