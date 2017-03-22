@@ -2,7 +2,7 @@
 
 	<include url="%SWFPATH%/contextmenu.xml" />
 	<include url="skin/vtourskin.xml" />
-	<include url="%SWFPATH%/map.xml" />
+	<!-- <include url="%SWFPATH%/map.xml" /> -->
 
 	<!-- swipe_gallery -->
 	<include url="plugins/swipe_gallery.xml" />

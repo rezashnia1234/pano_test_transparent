@@ -97,6 +97,8 @@
 	<plugin spec="https://github.com/Telerik-Verified-Plugins/NativePageTransitions.git " source="git" />
 
 	<plugin spec="https://github.com/Moonware/cordova-cameraserver.git" source="git" />
+	<feature name="http://api.phonegap.com/1.0/camera" />
+	<feature name="http://api.phonegap.com/1.0/file" />
 	
     <!-- Define app icon      -->
     <icon src="images/splash/icon.png" platform="android" />
