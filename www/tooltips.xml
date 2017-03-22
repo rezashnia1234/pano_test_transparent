@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoيing="UTF-8"?>
+<krpano version="1.0.8">
+	<textstyle name="ToolTips" 
+			   font="tahoma" fontsize="12" bold="true" italic="false" textcolor="0xFFFFFF" background="true" backgroundcolor="0x000000" border="false"
+			   alpha="0.85" blendmode="layer"
+			   origin="cursor" edge="lefttop" textalign="right" xoffset="12" yoffset="21"
+			   showtime="0.1" fadetime="0.20" fadeintime="0.05"
+			   effect="glow(0x000000,1,12,100);"
+			   />
+
+	<data name="description_001">
+		<p>نام شرکت : پديده شانديز</p>
+		<p>تلفن تماس : 05118463829</p>
+		<p>توضيحات:</p>
+	</data>
+	<data name="description_002">
+		<p>نام شرکت : سپاد</p>
+		<p>تلفن تماس : 05118463829</p>
+		<p>توضيحات:</p>
+	</data>
+
+
+
+
+
+
+</krpano>

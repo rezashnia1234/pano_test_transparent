@@ -1,0 +1,101 @@
+<krpano version="1.0.8">
+	<action name="hidemap-all">
+				Move-Map();
+	</action>
+
+	<plugin name="map-body"
+			url="skin/blank.png"
+			align="lefttop" x="5" y="5"
+			keep="true"
+			maskchildren="true"
+			scalechildren="false"
+	        handcursor="false"
+	        capture="false"
+			zorder="110"
+			width="331"
+			height="480"
+	        />
+	<plugin name="map-background-black"
+			url="skin/parvaz-skin/map-back3.png"
+			parent="map-body"
+			align="lefttop" x="0" y="0"
+			keep="true"
+			maskchildren="false"
+			scalechildren="false"
+	        handcursor="false"
+	        capture="false"
+			zorder="110"
+			width="331"
+			height="480"
+			blendmode="normal"
+			onclick="hidemap();"
+			
+			blendmode2="DARKEN"
+	        />
+
+	<plugin name="BTN-close"
+			url="skin/blank.png"
+			parent="map-background-black"
+			align="lefttop" x="315" y="12"
+			keep="true"
+			maskchildren="false"
+			scalechildren="false"
+	        handcursor="true"
+			zorder="110"
+			width="14"
+			height="14"
+			blendmode="normal"
+			onclick="hidemap();"
+	        />
+
+	<plugin name="BTN-open-map"
+			url="skin/parvaz-skin/open.png"
+			align="lefttop" x="-132" y="19"
+			keep="true"
+			maskchildren="false"
+			scalechildren="false"
+	        handcursor="true"
+			zorder="110"
+			width="132"
+			height="70"
+			blendmode="normal"
+			onhover=""
+			onout=""
+			onclick="showmap();"
+	        />
+
+	<action name="showmap">
+				Move-Map();
+	</action>
+	<action name="hidemap">
+				Move-Map();
+	</action>
+
+	<action name="Move-Map">
+	if(IsMapOpen != true,
+		set(IsMapOpen,true);
+		set(plugin[MapIcon].onhover,showtext(بستن نقشه, ToolTips);set(crop,0|33|33|33););
+		tween(plugin[map-body].alpha, 1);
+		tween(plugin[map-body].x,0);
+		
+		set(plugin[BTN-open-map].enabled,false);
+		tween(plugin[BTN-open-map].alpha, 0.0);
+		tween(plugin[BTN-open-map].x, -132);
+	,
+		set(IsMapOpen,false);
+		set(plugin[MapIcon].onhover,showtext(باز کردن نقشه, ToolTips);set(crop,0|33|33|33););
+		tween(plugin[map-body].alpha, 0.0);
+		tween(plugin[map-body].x,-331);
+		
+		set(plugin[BTN-open-map].enabled,true);
+		tween(plugin[BTN-open-map].alpha, 1.0);
+		tween(plugin[BTN-open-map].x, 0);
+	);	
+
+	</action>
+
+
+
+
+
+</krpano>

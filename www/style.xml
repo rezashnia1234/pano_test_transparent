@@ -1,0 +1,24 @@
+<krpano>
+<!-- info box -->
+	<style   
+		devices="flash"
+		name="hotspot_info" 
+		url="%BASEDIR%/hotspots/GipsaFabrika_HotspotInfoBox.swf" 
+		zoom="false" 
+		alpha="0.0" 
+		onover="set(zorder, 2000);"
+		onclick="plugin[GipsaFabrika_InfoBox].showInfo(get(infotoload));"  />
+
+	<style    
+		devices="html5"
+		name="hotspot_info" 
+		url="%BASEDIR%/hotspots/GipsaFabrika_HotspotInfoBox.png" 
+		zoom="false" 
+		alpha="0.0" 
+		onclick="openinfobox(get(infotoload));"
+		altonloaded="if(isphone, mul(scale,2));"/>
+
+	<!-- info box -->
+	
+	
+</krpano>

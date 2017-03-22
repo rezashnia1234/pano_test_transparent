@@ -1,0 +1,97 @@
+<infobox>
+	<labels>
+		<label id="up">UP</label>
+		<label id="down">DOWN</label>
+	</labels>
+
+	<boxes>
+		<box id="info_flooring">
+			<title><![CDATA[Flooring]]></title>
+			<text><![CDATA[Three-layer oiled parquet from the tropical hardwood <b><i>Iroco</i></b> tree, which grows in Africa in the Ivory Coast, Ghana, Cameroon and Nigeria. The <b><i>Iroco</i></b> is an original tree, which thanks to its interesting colors, creates specially warm home atmosphere. The color shades of the wood usually range from yellowish brown to golden-shine brown. The wood hardness comparison in percentage (assuming that oak hardness is 100%): oak 100% : <b><i>Iroco</i></b> 114%.]]></text> 
+			<imageurl><![CDATA[]]></imageurl>
+		</box>
+		<box id="info_flooring_villa">
+			<title><![CDATA[Flooring]]></title>
+			<text><![CDATA[Three-layer oiled parquet from the tropical hardwood <b><i>Sapelli</i></b> tree. This wood is very popular since its structure and color reminds mahogany. The <b><i>Sapelli</i></b> tree is used in floor finishing due to its great wear resistance and wood pattern, it is also used in manufacture of guitar carcass and interiors of <i>Cadillac</i> cars. The colors of wood range from rosy brown to copper red color shades.]]></text> 
+			<imageurl><![CDATA[]]></imageurl>
+		</box>
+		<box id="info_windows">
+			<title><![CDATA[Windows]]></title>
+			<text><![CDATA[Aluminum and the <b><i>Mahogany</i></b> frame with triple glass-pack. The <b><i>Mahogany</i></b> is a tropical hardwood, and is outstanding due to its physical mechanical features - great resistance against outdoor conditions. Because of its color (from yellowish to dark red/ brown) and the fine pattern it is generally used for luxury furniture and interior elements.]]></text> 
+			<imageurl><![CDATA[]]></imageurl>
+		</box>
+		<box id="info_doors">
+			<title><![CDATA[Door]]></title>
+			<text><![CDATA[Apartment external door - double wooden door, veneering of the exotic tropical hardwood <b><i>Iroco</i></b> tree, equipped with high-quality handle mechanisms and lock by German manufacturer <b>FSB</b>.
+			<br/>
+			<br/>Doors to internal premises in the apartment are made of wood with vertical veneering of the tropical hardwood <b><i>Iroco</i></b>, as well as equipped with high-quality handle mechanisms by German manufacturer <b>FSB</b>.]]></text> 
+			<imageurl><![CDATA[]]></imageurl>
+		</box>
+		<box id="info_doors_villa">
+			<title><![CDATA[Doors]]></title>
+			<text><![CDATA[External doors - double aluminum profile doors with red wooden panel, equipped with high-quality handle mechanisms and lock by German manufacturer <b>FSB</b>. 
+			<br/>
+			</br>Doors to the internal premises are made of wood with vertical veneering of the tropical hardwood <b><i>Sapelli</i></b> tree, as well as equipped with high-quality handle mechanisms by German manufacturer <b>FSB</b>.]]></text> 
+			<imageurl><![CDATA[]]></imageurl>
+		</box>
+		<box id="info_brick">
+			<title><![CDATA[Brick]]></title>
+			<text><![CDATA[Twice-baked finishing brick in black, red, white and beige colors, applied both in building exterior and, in places, in interior. The required dimensions of the brick were ordered and manufactured in <b>WIENERBERGER</b> factory in Belgium, the biggest brick manufacturer in the world. Such brick has not been used in Latvia so far.]]></text> 
+			<imageurl><![CDATA[]]></imageurl>
+		</box>
+		<box id="info_kitchens_40_42">
+			<title><![CDATA[Kitchens]]></title>
+			<text><![CDATA[Italian brand <b>BOFFI</b> kitchens equipped with German premium class kitchen appliances of <b>KUPPERSBUCH</b> brand - refrigerator, stove, cooking hood, microwave oven, oven, warming drawer, wine cabinet and coffee machine.]]></text> 
+			<imageurl><![CDATA[]]></imageurl>
+		</box>
+		<box id="info_kitchens_44">
+			<title><![CDATA[Kitchens]]></title>
+			<text><![CDATA[German brand <b>POGGENPOHL</b> kitchens equipped with German premium class kitchen appliances of <b>KUPPERSBUCH</b> brand - refrigerator, stove, cooking hood, microwave oven, oven, warming drawer, wine cabinet and coffee machine.]]></text> 
+			<imageurl><![CDATA[]]></imageurl>
+		</box>
+		<box id="info_kitchens_villa">
+			<title><![CDATA[Kitchens]]></title>
+			<text><![CDATA[Luxury German brand <b>BULTHAUP</b> kitchen equipped with German kitchen appliance brand No.1 - <b>GAGGENAU</b> - refrigerator, stove, cooking hood, microwave oven, oven, warming drawer and wine cabinet.]]></text> 
+			<imageurl><![CDATA[]]></imageurl>
+		</box>
+		<box id="info_terraces">
+			<title><![CDATA[Terraces]]></title>
+			<text><![CDATA[Terraces built of the high-quality exotic <b><i>Tatajuba</i></b> tree board planking, ensuring a great endurance against external climatic conditions.]]></text> 
+			<imageurl><![CDATA[]]></imageurl>
+		</box>
+		<box id="info_bathrooms">
+			<title><![CDATA[Bathrooms]]></title>
+			<text><![CDATA[Bathrooms equipped with leading German brands for sanitary ceramics and accessories:
+			<br/>• <b>KERAMAG</b> built-in toilets and bidets;
+			<br/>• <b>DURAVIT</b> washbasins, equipped with <b>DORNBRACHT</b> water mixers and <b>KEUCO</b> accessories.
+			<br/>
+			<br/>A free-standing Estonian brand <B>BALTECO SENZO</b> stone bathtub and/ or a glass-structure shower cabin, designed individually by Zaiga Gaile.]]></text> 
+			<imageurl><![CDATA[]]></imageurl>
+		</box>
+		<box id="info_bathrooms_villa">
+			<title><![CDATA[Bathrooms]]></title>
+			<text><![CDATA[Bathrooms equipped with leading German brands for sanitary ceramics and accessories:
+			<br/>• <b>KERAMAG</b> built-in toilets and bidets;
+			<br/>• <b>DURAVIT</b> washbasins, equipped with <b>DORNBRACHT</b> water mixers and <b>KEUCO</b> accessories.
+			<br/>
+			<br/>German brand <b>KORALLE</b> built-in bathtub and/ or a glass-structure shower cabin, designed individually by Zaiga Gaile.]]></text> 
+			<imageurl><![CDATA[]]></imageurl>
+		</box>
+		<box id="info_fireplace">
+			<title><![CDATA[Fire-place]]></title>
+			<text><![CDATA[A genuine piece of work by a recognized Latvian artist working in metal Ainārs Sils, design by Zaiga Gaile.]]></text> 
+			<imageurl><![CDATA[]]></imageurl>
+		</box>
+		<box id="info_management">
+			<title><![CDATA[Smart house]]></title>
+			<text><![CDATA[Management and control of lighting, temperature, conditioner, heated floors, blinds, audio/ video and other devices possible from any place in the apartment.]]></text> 
+			<imageurl><![CDATA[]]></imageurl>
+		</box>
+		<box id="info_lift_villa">
+			<title><![CDATA[Lift]]></title>
+			<text><![CDATA[The internal lift supplied by <b>KONE</b>, leading from underground parking till third floor bedrooms. Lift cabin walls: stainless steel with texture and galvanized metal. Cabin doors: glass in stainless steel framing. The lift shaft made of glass. ]]></text> 
+			<imageurl><![CDATA[]]></imageurl>
+		</box>
+	</boxes>
+	
+</infobox>
