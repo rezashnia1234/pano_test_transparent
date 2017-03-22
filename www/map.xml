@@ -50,7 +50,7 @@
 
 	<plugin name="BTN-open-map"
 			url="skin/parvaz-skin/open.png"
-			align="lefttop" x="-132" y="19"
+			align="lefttop" x="-132" y="45"
 			keep="true"
 			maskchildren="false"
 			scalechildren="false"
