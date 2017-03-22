@@ -30,6 +30,7 @@
 				// the ip is the active network connection
 				// if no wifi or no cell, "127.0.0.1" will be returned.
 				console.log('CameraServer Started @ ' + url); 
+				window.localStorage.setItem('localhost_url',url);
 			}, function( error ){
 				console.log('CameraServer Start failed: ' + error);
 			});
@@ -47,13 +48,13 @@
 
 				$('#camera').load(function() {
 					setTimeout(function () {
-						$("#camera").attr("src","http://localhost:8080/live.jpg?"+new Date().getTime()	);
-						console.log("http://localhost:8080/live.jpg?"+new Date().getTime());
+						$("#camera").attr("src",window.localStorage.getItem('localhost_url') + "live.jpg?"+new Date().getTime()	);
+						console.log(window.localStorage.getItem('localhost_url') + "live.jpg?"+new Date().getTime());
 					}, 100);
 				});
 				
-				$("#camera").attr("src","http://localhost:8080/live.jpg");
-				console.log("http://localhost:8080/live.jpg");
+				$("#camera").attr("src",window.localStorage.getItem('localhost_url') + "live.jpg");
+				console.log(window.localStorage.getItem('localhost_url') + "live.jpg");
 				
 			}, 3000);
 			
