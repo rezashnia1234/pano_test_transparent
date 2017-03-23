@@ -165,7 +165,7 @@ var krpanoplugin = function() {
 		// console.log("hlookat:" + W[p][y]);
 		// console.log("vlookat:" + W[p][k]);
 		// console.log("camroll:" + W[p][N]);
-		/*
+		
 		if(window.sessionStorage.getItem('temp_delta') != null)
 		{
 			var temp_delta = window.sessionStorage.getItem('temp_delta');
@@ -203,19 +203,24 @@ var krpanoplugin = function() {
 					
 					window.sessionStorage.setItem('temp_delta',temp_delta);
 					window.sessionStorage.setItem('temp_compass',temp_compass);
+					/**/
+					if(temp_delta > 10)
+					{
+						if(temp_compass>180)
+							temp_compass = temp_compass - 360;
+						// W[p][y] = temp_compass;
+						window.sessionStorage.setItem('compass_used',"yes");
+						
+						var krpano2 = document.getElementById('krpanoSWFObject');
+						krpano2.call("plugin[skin_gyro].resetSensor(" + temp_compass + ");");
+					}
 					
-					//if(temp_delta > 10)
-					//{
-					//	if(temp_compass>180)
-					//		temp_compass = temp_compass - 360;
-					//	W[p][y] = temp_compass;
-					//}
 				};
 				function compassError(error) {};
 			}
 			navigator.compass.getCurrentHeading(compassSuccess, compassError);
 		}
-		*/
+		
 		//////////////////////////////////////////////////////////////////////////////////////////////////
 		//////////////////////////////////////////////////////////////////////////////////////////////////
 		//////////////////////////////////////////////////////////////////////////////////////////////////
