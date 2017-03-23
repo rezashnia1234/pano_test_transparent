@@ -176,6 +176,8 @@ var krpanoplugin = function() {
 				W[p][y] = temp_compass;
 				console.log("temp_compass :" + temp_compass);
 			}
+			window.sessionStorage.removeItem("temp_delta");
+			window.sessionStorage.removeItem("temp_compass");
 		}
 		if (window.cordova)
 		{
