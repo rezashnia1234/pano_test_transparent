@@ -554,8 +554,8 @@
 		<!--hamiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiid-->
 		<!--hamiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiid-->
 		<!--hamiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiid-->
-		if(show_gyrobutton,  set(control.usercontrol, off) );
-		ifnot(show_gyrobutton, set(control.usercontrol, all) );
+		<!--if(show_gyrobutton,  set(control.usercontrol, off) );-->
+		<!--ifnot(show_gyrobutton, set(control.usercontrol, all) );-->
 		<!--hamiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiid-->
 		<!--hamiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiid-->
 		<!--hamiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiid-->
