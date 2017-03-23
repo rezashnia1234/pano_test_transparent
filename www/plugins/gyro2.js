@@ -178,7 +178,7 @@ var krpanoplugin = function() {
 			}
 			window.sessionStorage.removeItem("temp_delta");
 			window.sessionStorage.removeItem("temp_compass");
-			window.sessionStorage.setItem('compass_used',"yes");
+			// window.sessionStorage.setItem('compass_used',"yes");
 		}
 		if (window.cordova && window.sessionStorage.getItem('compass_used') == null)
 		{
