@@ -182,8 +182,7 @@ var krpanoplugin = function() {
 			// window.sessionStorage.setItem('compass_used',"yes");
 		}
 		*/
-		// if (window.cordova && window.sessionStorage.getItem('compass_used') == null)
-		if (window.cordova)
+		if (window.cordova && window.sessionStorage.getItem('compass_used') == null)
 		{
 			if (typeof compassSuccess !== 'undefined' && $.isFunction(compassSuccess)) {
 				
