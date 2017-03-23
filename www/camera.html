@@ -16,6 +16,7 @@
 			document.addEventListener("deviceready", onDeviceReady, false);
 		}
 		function onDeviceReady() {
+			//window.sessionStorage.removeItem("compass_used");
 			cordova.plugins.CameraServer.startServer({
 				'www_root' : '/',
 				'port' : 8080,
@@ -76,6 +77,6 @@
 	</style>
 </head>
 <body onload="init();">
-<img id="camera" class="fullscreen-image" src="skin/blank--0.png" >
+<img id="camera" class="fullscreen-image" src="skin/blank.png" >
 </body>
 </html>

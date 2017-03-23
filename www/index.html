@@ -24,6 +24,7 @@
 			document.addEventListener("deviceready", onDeviceReady, false);
 		}
 		function onDeviceReady() {
+			//window.sessionStorage.removeItem("compass_used");
 			window.plugins.cameraAccess.checkAccess(
 				function() {
 					// Go ahead and access the camera here

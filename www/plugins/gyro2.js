@@ -182,7 +182,8 @@ var krpanoplugin = function() {
 			// window.sessionStorage.setItem('compass_used',"yes");
 		}
 		*/
-		if (window.cordova && window.sessionStorage.getItem('compass_used') == null)
+		// if (window.cordova && window.sessionStorage.getItem('compass_used') == null)
+		if (window.cordova)
 		{
 			if (typeof compassSuccess !== 'undefined' && $.isFunction(compassSuccess)) {
 				
@@ -211,11 +212,9 @@ var krpanoplugin = function() {
 							temp_compass = temp_compass - 360;
 						// W[p][y] = temp_compass;
 						window.sessionStorage.setItem('compass_used',"yes");
-						console.log("temp_compass 1 :" + temp_compass);
+						
 						var krpano2 = document.getElementById('krpanoSWFObject');
 						krpano2.call("plugin[skin_gyro].resetSensor(" + temp_compass + ");");
-						console.log("temp_compass 2 :" + temp_compass);
-						console.log("plugin[skin_gyro].resetSensor(" + temp_compass + ");");
 					}
 					
 				};

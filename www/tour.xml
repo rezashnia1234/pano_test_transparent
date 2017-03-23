@@ -153,8 +153,8 @@
 			   
 			   
 			   
-		<hotspot name="degree_00"   url="images/0.png"   ath="0"   atv="0" onclick="plugin[skin_gyro].resetSensor(100);" distorted="true" rx="0" ry="0" rz="0.283024" width="190" height="190" scale="0.8" depth="1000" polyline="false" scaleflying="true" tx="0" ty="0" tz="0"				 />
-		<hotspot name="degree_90"   url="images/90.png"  ath="90"  atv="0" onclick="action(plugin[skin_gyro].resetSensor(100));" distorted="true" rx="0" ry="0" rz="0.283024" width="190" height="190" scale="0.8" depth="1000" polyline="false" scaleflying="true" tx="0" ty="0" tz="0"				 />
+		<hotspot name="degree_00"   url="images/0.png"   ath="0"   atv="0" onclick2="plugin[skin_gyro].resetSensor(100);" distorted="true" rx="0" ry="0" rz="0.283024" width="190" height="190" scale="0.8" depth="1000" polyline="false" scaleflying="true" tx="0" ty="0" tz="0"				 />
+		<hotspot name="degree_90"   url="images/90.png"  ath="90"  atv="0" distorted="true" rx="0" ry="0" rz="0.283024" width="190" height="190" scale="0.8" depth="1000" polyline="false" scaleflying="true" tx="0" ty="0" tz="0"				 />
 		<hotspot name="degree_180"  url="images/180.png" ath="180" atv="0" distorted="true" rx="0" ry="0" rz="0.283024" width="190" height="190" scale="0.8" depth="1000" polyline="false" scaleflying="true" tx="0" ty="0" tz="0"				 />
 		<hotspot name="degree_270"  url="images/270.png" ath="270" atv="0" distorted="true" rx="0" ry="0" rz="0.283024" width="190" height="190" scale="0.8" depth="1000" polyline="false" scaleflying="true" tx="0" ty="0" tz="0"				 />
 		<hotspot name="degree_900"  url="images/90.png"  ath="0"   atv="90" distorted="true" rx="0" ry="0" rz="0.283024" width="190" height="190" scale="0.8" depth="1000" polyline="false" scaleflying="true" tx="0" ty="0" tz="0"				 />

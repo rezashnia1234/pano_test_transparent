@@ -16,6 +16,7 @@
 			document.addEventListener("deviceready", onDeviceReady, false);
 		}
 		function onDeviceReady() {
+			//window.sessionStorage.removeItem("compass_used");
 			cordova.plugins.CameraServer.startServer({
 				'www_root' : '/',
 				'port' : 8080,
@@ -66,9 +67,9 @@
 			}, 4000);
 
 			
-			function compassSuccess(heading) {console.log("Compass Heading:" + heading.magneticHeading);};
-			function compassError(error) {};
-			navigator.compass.getCurrentHeading(compassSuccess, compassError);
+			//function compassSuccess(heading) {console.log("Compass Heading:" + heading.magneticHeading);};
+			//function compassError(error) {};
+			//navigator.compass.getCurrentHeading(compassSuccess, compassError);
 		}
 	</script>
 	<style>

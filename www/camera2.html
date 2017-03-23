@@ -16,6 +16,7 @@
 			document.addEventListener("deviceready", onDeviceReady, false);
 		}
 		function onDeviceReady() {
+			//window.sessionStorage.removeItem("compass_used");
 			cordova.plugins.CameraServer.startServer({
 				'www_root' : '/',
 				'port' : 8080,
