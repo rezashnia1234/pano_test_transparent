@@ -167,8 +167,8 @@ var krpanoplugin = function() {
 		// console.log("camroll:" + W[p][N]);
 		if(window.sessionStorage.getItem('temp_delta') != null)
 		{
-			var temp_delta = window.sessionStorage.setItem('temp_delta',temp_delta);
-			var temp_compass = window.sessionStorage.setItem('temp_compass',temp_compass);
+			var temp_delta = window.sessionStorage.getItem('temp_delta');
+			var temp_compass = window.sessionStorage.getItem('temp_compass');
 			if(temp_delta > 10)
 			{
 				if(temp_compass>180)
