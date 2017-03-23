@@ -165,7 +165,7 @@ var krpanoplugin = function() {
 		// console.log("hlookat:" + W[p][y]);
 		// console.log("vlookat:" + W[p][k]);
 		// console.log("camroll:" + W[p][N]);
-		
+		/*
 		if(window.sessionStorage.getItem('temp_delta') != null)
 		{
 			var temp_delta = window.sessionStorage.getItem('temp_delta');
@@ -181,6 +181,7 @@ var krpanoplugin = function() {
 			window.sessionStorage.removeItem("temp_compass");
 			// window.sessionStorage.setItem('compass_used',"yes");
 		}
+		*/
 		if (window.cordova && window.sessionStorage.getItem('compass_used') == null)
 		{
 			if (typeof compassSuccess !== 'undefined' && $.isFunction(compassSuccess)) {
@@ -201,8 +202,8 @@ var krpanoplugin = function() {
 						temp_delta = 360 - temp_delta;
 					console.log("Delta :" + temp_delta);
 					
-					window.sessionStorage.setItem('temp_delta',temp_delta);
-					window.sessionStorage.setItem('temp_compass',temp_compass);
+					// window.sessionStorage.setItem('temp_delta',temp_delta);
+					// window.sessionStorage.setItem('temp_compass',temp_compass);
 					/**/
 					if(temp_delta > 10)
 					{
@@ -210,9 +211,11 @@ var krpanoplugin = function() {
 							temp_compass = temp_compass - 360;
 						// W[p][y] = temp_compass;
 						window.sessionStorage.setItem('compass_used',"yes");
-						
+						console.log("temp_compass 1 :" + temp_compass);
 						var krpano2 = document.getElementById('krpanoSWFObject');
 						krpano2.call("plugin[skin_gyro].resetSensor(" + temp_compass + ");");
+						console.log("temp_compass 2 :" + temp_compass);
+						console.log("plugin[skin_gyro].resetSensor(" + temp_compass + ");");
 					}
 					
 				};
