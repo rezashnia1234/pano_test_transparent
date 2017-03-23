@@ -334,7 +334,7 @@
 	<!--hamiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiid-->
 	<!--hamiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiid-->
 	<!-- gyro plugin -->
-	<plugin name="skin_gyro" keep="true" url="" html5_url="%SWFPATH%/plugins/gyro2.js" devices="html5" enabled="true" onavailable="skin_arrange_buttons();" />
+	<plugin name="skin_gyro" keep="true" url="" touch_mode="off" html5_url="%SWFPATH%/plugins/gyro2.js" devices="html5" enabled="true" onavailable="skin_arrange_buttons();" />
 	<!--hamiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiid-->
 	<!--hamiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiid-->
 	<!--hamiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiid-->
