@@ -185,42 +185,47 @@ var krpanoplugin = function() {
 		// if (window.cordova && window.sessionStorage.getItem('compass_used') == null)
 		if (window.cordova)
 		{
-			if (typeof compassSuccess !== 'undefined' && $.isFunction(compassSuccess)) {
-				
-			}
-			else
-			{
-				function compassSuccess(heading) {
-					// console.log("Compass Heading:" + heading.magneticHeading);
-					// console.log("hlookat:" + W[p][y]);
-					var temp_hlook = W[p][y];
-					var temp_compass = heading.magneticHeading;
-					if(temp_hlook<0)
-						temp_hlook = temp_hlook + 360;
-					
-					var temp_delta = Math.abs(temp_compass - temp_hlook) % 360;
-					if(temp_delta > 180)
-						temp_delta = 360 - temp_delta;
-					// console.log("Delta :" + temp_delta);
-					
-					// window.sessionStorage.setItem('temp_delta',temp_delta);
-					// window.sessionStorage.setItem('temp_compass',temp_compass);
-					/**/
-					if(temp_delta > 10)
-					{
-						if(temp_compass>180)
-							temp_compass = temp_compass - 360;
-						// W[p][y] = temp_compass;
-						window.sessionStorage.setItem('compass_used',"yes");
+			window.addEventListener("deviceorientation", function(event) {
+				if (((event.alpha > -1 ) && (event.alpha < 20)) || ((event.alpha < 360 ) && (event.alpha > 340)))
+				{
+					if (typeof compassSuccess !== 'undefined' && $.isFunction(compassSuccess)) {
 						
-						var krpano2 = document.getElementById('krpanoSWFObject');
-						krpano2.call("plugin[skin_gyro].resetSensor(" + temp_compass + ");");
 					}
-					
-				};
-				function compassError(error) {};
-			}
-			navigator.compass.getCurrentHeading(compassSuccess, compassError);
+					else
+					{
+						function compassSuccess(heading) {
+							// console.log("Compass Heading:" + heading.magneticHeading);
+							// console.log("hlookat:" + W[p][y]);
+							var temp_hlook = W[p][y];
+							var temp_compass = heading.magneticHeading;
+							if(temp_hlook<0)
+								temp_hlook = temp_hlook + 360;
+							
+							var temp_delta = Math.abs(temp_compass - temp_hlook) % 360;
+							if(temp_delta > 180)
+								temp_delta = 360 - temp_delta;
+							// console.log("Delta :" + temp_delta);
+							
+							// window.sessionStorage.setItem('temp_delta',temp_delta);
+							// window.sessionStorage.setItem('temp_compass',temp_compass);
+							/**/
+							if(temp_delta > 10)
+							{
+								if(temp_compass>180)
+									temp_compass = temp_compass - 360;
+								// W[p][y] = temp_compass;
+								window.sessionStorage.setItem('compass_used',"yes");
+								
+								var krpano2 = document.getElementById('krpanoSWFObject');
+								krpano2.call("plugin[skin_gyro].resetSensor(" + temp_compass + ");");
+							}
+							
+						};
+						function compassError(error) {};
+					}
+					navigator.compass.getCurrentHeading(compassSuccess, compassError);
+				}
+			}, true);
 		}
 		
 		//////////////////////////////////////////////////////////////////////////////////////////////////
