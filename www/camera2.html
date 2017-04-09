@@ -1,112 +1,117 @@
 ﻿<!DOCTYPE html>
 <html>
-<head>
-	<title>نسخه نمونه</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
-	<meta name="apple-mobile-web-app-capable" content="yes" />
-	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
-	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-	<meta http-equiv="x-ua-compatible" content="IE=edge" />
-	<script src="js/jquery-1.11.3.min.js"></script>
-	<!-- <script src="js/console.log.js"></script> -->
-	<script src="cordova.js"></script>
-	<script>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <title>Hello World</title>
+		<script src="js/jquery-1.11.3.min.js"></script>
+		<!-- <script src="js/console.log.js"></script> -->
+		<script src="cordova.js"></script>
+        <script>
 		function init() {		
 			console.log('SMGROUP ::::::::::::::::::::::::::::::::::::	start init()');
 			document.addEventListener("deviceready", onDeviceReady, false);
 		}
 		function onDeviceReady() {
-			window.sessionStorage.removeItem("compass_used");
-			cordova.plugins.CameraServer.startServer({
-				'www_root' : '/',
-				'port' : 8080,
-				'localhost_only' : true,
-				'json_info': []
-			}, function( url ){
-				// console.log('CameraServer Started @ ' + url); 
-				window.localStorage.setItem('localhost_url',url);
-			}, function( error ){
-				// console.log('CameraServer Start failed: ' + error);
-			});
-
-			//setTimeout(function(){
-				cordova.plugins.CameraServer.startCamera(function(){
-					// console.log('Capture Started');
-				},function( error ){
-					// console.log('CameraServer StartCapture failed: ' + error);
-				});
-			//}, 1000);
-			
-			$('#camera').load(function() {
-				setTimeout(function () {
-					$("#camera").attr("src","http://localhost:8080/" + "live.jpg?"+new Date().getTime()	);
-				}, 40);
-			});
-			
-			$("#camera").attr("src","http://localhost:8080/" + "live.jpg");
-			setTimeout(function(){
-				$("#camera").attr("src","http://localhost:8080/" + "live.jpg");
-			}, 500);
-			setTimeout(function(){
-				$("#camera").attr("src","http://localhost:8080/" + "live.jpg");
-			}, 1000);
-			setTimeout(function(){
-				$("#camera").attr("src","http://localhost:8080/" + "live.jpg");
-			}, 1500);
-			setTimeout(function(){
-				$("#camera").attr("src","http://localhost:8080/" + "live.jpg");
-			}, 2000);
-			setTimeout(function(){
-				$("#camera").attr("src","http://localhost:8080/" + "live.jpg");
-			}, 2500);
-			setTimeout(function(){
-				$("#camera").attr("src","http://localhost:8080/" + "live.jpg");
-			}, 3000);
-			setTimeout(function(){
-				$("#camera").attr("src","http://localhost:8080/" + "live.jpg");
-			}, 4000);
-			
+			canvasMain = document.getElementById("camera");
+			CanvasCamera.initialize(canvasMain);
+			// define options
+			var opt = {
+				quality: 75,
+				destinationType: CanvasCamera.DestinationType.DATA_URL,
+				encodingType: CanvasCamera.EncodingType.JPEG,
+				saveToPhotoAlbum:true,
+				correctOrientation:true,
+				width:640,
+				height:480
+			};
+			CanvasCamera.start(opt);
 		}
-	</script>
-	<style>
-		@-ms-viewport { width:device-width; }
-		@media only screen and (min-device-width:800px) { html { overflow:hidden; } }
-		html { height:100%; }
-		body { background-color:gray;height:100%; overflow:hidden; margin:0; padding:0; font-family:Arial, Helvetica, sans-serif; font-size:16px; color:#FFFFFF; }
-		#pano { height: 100%; width: 100%;}
-		a.rightcorner {position: absolute;right: 0;background: green;color: white;padding: 15px;z-index:99999999999999999}
-
-		.fullscreen-image {
-			max-width: 100%;
-			max-height: 100%;
-			bottom: 0;
-			left: 0;
-			right: 0;
-			top: 0;
-			margin: auto;
-			overflow: auto;
-			position: absolute !important;
-			border:0px solid black;
-			z-index:0;
-			display2: block;
-			width: 100%;
-		}
-	</style>
-</head>
-<body onload="init();">
-<a href="index.html" class="rightcorner">Home</a>
-<img id="camera" class="fullscreen-image" src="skin/blank.png" >
-
-<script src="tour.js"></script>
-<div id="pano" >
-	<noscript><table style="width:100%;height:100%;"><tr style="vertical-align:middle;"><td><div style="text-align:center;">ERROR:<br/><br/>Javascript not activated<br/><br/></div></td></tr></table></noscript>
-	<script>
-		embedpano({swf:"tour.swf", xml:"tour.xml?0", target:"pano", html5:"only+css3d", wmode:"transparent" , mobilescale:1.0, passQueryParameters:true});
-	</script>
-</div>
+		</script>
+    </head>
+    <body onload="init();">
+        <div class="app">
+            <h1>Apache Cordova</h1>
+            <div id="deviceready" class="blink">
+                <p class="event listening">Connecting to Device</p>
+                <p class="event received">Device is Ready</p>
+            </div>
+            
+            <h2> Camera Position </h2>
+            <input type="radio" name="deviceposition" id="deviceposition_back" value="Back" onclick="onChangeDevicePosition();"/>
+            <label for="deviceposition_back">Back</label>
+            <br/>
+            <input type="radio" name="deviceposition" id="deviceposition_front" value="Front" onclick="onChangeDevicePosition();"/>
+            <label for="deviceposition_front">Front</label>
+            
+            
+            <h2> Flash Mode </h2>
+            <input type="radio" name="flashmode" id="flashmode_off" value="Off" onclick="onChangeFlashMode();"/>
+            <label for="flashmode_off">Off</label>
+            <br/>
+            <input type="radio" name="flashmode" id="flashmode_on" value="On" onclick="onChangeFlashMode();"/>
+            <label for="flashmode_on">On</label>
+            <br/>
+            <input type="radio" name="flashmode" id="flashmode_auto" value="Auto" onclick="onChangeFlashMode();"/>
+            <label for="flashmode_auto">Auto</label>
+            <br/>
+            
+            <input type="button" value="Take a picture" onclick="onTakePicture();" />
 
 
+        </div>
+        
+	<!— camera preview canvas —>
+        <canvas id="camera" width="352" height="288" style="border:2px"></canvas>
+        
+     
+        
+        <script>
 
+            function onChangeDevicePosition() {
 
-</body>
+                var newDevicePosition = CanvasCamera.CameraPosition.BACK;
+                if (document.getElementById("deviceposition_back").checked)
+                {
+                    newDevicePosition = CanvasCamera.CameraPosition.BACK;
+                }
+                else if (document.getElementById("deviceposition_front").checked)
+                {
+                    newDevicePosition = CanvasCamera.CameraPosition.FRONT;
+                }
+                //
+                CanvasCamera.setCameraPosition(newDevicePosition);
+            }
+            
+            function onChangeFlashMode() {
+                
+                var newFlashMode = CanvasCamera.FlashMode.OFF;
+                if (document.getElementById("flashmode_off").checked)
+                {
+                    newFlashMode = CanvasCamera.FlashMode.OFF;
+                }
+                else if (document.getElementById("flashmode_on").checked)
+                {
+                    newFlashMode = CanvasCamera.FlashMode.ON;
+                }
+                else if (document.getElementById("flashmode_auto").checked)
+                {
+                    newFlashMode = CanvasCamera.FlashMode.AUTO;
+                }
+                
+                CanvasCamera.setFlashMode(newFlashMode);
+            }
+            
+            function onTakePicture() {
+                CanvasCamera.takePicture(onTakeSuccess);
+            }
+            
+            function onTakeSuccess(data) {
+                //
+            }
+        </script>
+    </body>
 </html>
